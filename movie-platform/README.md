@@ -26,7 +26,7 @@ A website for finding movies: what's new in theaters, what's coming soon, what's
 
 ## Setup (about 5 minutes)
 
-1. **Get a free TMDB key:** create an account at <https://www.themoviedb.org/signup>, then go to *Settings → API* and copy the **API Read Access Token**.
+1. **Get a free TMDB key:** create an account at <https://www.themoviedb.org/signup>, then go to *Settings → API* and copy the **API Read Access Token** (the long one starting with `eyJ`). The shorter 32-character **API Key** also works.
 2. **Add it to GitHub:** in this repo, open *Settings → Secrets and variables → Actions → New repository secret*. Name it `TMDB_READ_TOKEN` and paste the token.
    - Optional: under the *Variables* tab, set `TMDB_REGION` (e.g. `GB`, `GH`, `CA`) to get release dates and streaming services for that country. The default is `US`.
 3. **Turn on GitHub Pages:** *Settings → Pages → Build and deployment → Source: **GitHub Actions***.

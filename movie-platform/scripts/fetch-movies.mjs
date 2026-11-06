@@ -19,8 +19,21 @@ import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const API = 'https://api.themoviedb.org/3';
-const TOKEN = process.env.TMDB_READ_TOKEN;
-const KEY = process.env.TMDB_API_KEY;
+// Tolerate common copy/paste slips: surrounding spaces or quotes, a "Bearer " prefix.
+const clean = (v) => (v || '').trim().replace(/^Bearer\s+/i, '').replace(/^["']+|["']+$/g, '').trim();
+let TOKEN = clean(process.env.TMDB_READ_TOKEN);
+let KEY = clean(process.env.TMDB_API_KEY);
+// A v4 Read Access Token is a long JWT (three dot-separated parts); a v3 API key is a
+// short 32-character hex string. Accept either one in either variable.
+const isJwt = (v) => v.split('.').length === 3;
+if (TOKEN && !isJwt(TOKEN)) {
+  KEY = KEY || TOKEN;
+  TOKEN = '';
+}
+if (KEY && isJwt(KEY) && !TOKEN) {
+  TOKEN = KEY;
+  KEY = '';
+}
 const REGION = (process.env.TMDB_REGION || 'US').toUpperCase();
 const LANGUAGE = process.env.TMDB_LANGUAGE || 'en-US';
 const PAGES = Math.max(1, Number(process.env.TMDB_PAGES || 2));
@@ -61,6 +74,14 @@ async function tmdb(path, params = {}, attempt = 0) {
     const retryAfter = Number(res.headers.get('retry-after')) || 2 ** attempt;
     await sleep(retryAfter * 1000);
     return tmdb(path, params, attempt + 1);
+  }
+  if (res.status === 401) {
+    throw new Error(
+      `TMDB rejected the credentials (401): ${await res.text()}\n` +
+        `Check the secret value at https://www.themoviedb.org/settings/api — copy either the ` +
+        `"API Read Access Token" (long, starts with "eyJ") or the "API Key" (32 characters), ` +
+        `with no extra spaces, and save it as the TMDB_READ_TOKEN repository secret.`,
+    );
   }
   if (!res.ok) throw new Error(`TMDB ${res.status} for ${path}: ${await res.text()}`);
   return res.json();
@@ -155,7 +176,7 @@ async function buildSnapshot() {
   const today = new Date().toISOString().slice(0, 10);
   const regionParams = { region: REGION };
 
-  console.log(`Fetching lists for region ${REGION}…`);
+  console.log(`Fetching lists for region ${REGION} (auth: ${TOKEN ? 'v4 read access token' : 'v3 API key'})…`);
   const [genres, trending, nowPlaying, upcoming, popular, topRated] = await Promise.all([
     tmdb('/genre/movie/list'),
     list('/trending/movie/day'),

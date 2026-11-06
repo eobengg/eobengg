@@ -72,10 +72,20 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .tools input { width: 220px; }
 .tools input:focus, .tools select:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
 
-@media (max-width: 760px) {
+#region { padding-right: 6px; }
+
+@media (max-width: 1100px) {
   .topbar { gap: 10px 16px; }
-  .tools { margin-left: 0; width: 100%; }
+  .nav { order: 3; width: calc(100% + var(--gutter) * 2); flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; margin: 0 calc(var(--gutter) * -1); padding: 0 var(--gutter); }
+  .nav::-webkit-scrollbar { display: none; }
+  .nav a { white-space: nowrap; }
+}
+@media (max-width: 760px) {
+  .tools { margin-left: 0; width: 100%; order: 4; }
   .tools input { flex: 1; width: auto; min-width: 0; }
+  #region { flex: none; }
+  #genre { flex: 1 1 0; min-width: 0; }
+  .tools input { flex: 1.4 1 0; }
 }
 
 .notice {
@@ -198,7 +208,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
   inset: 0;
   display: flex;
   align-items: flex-end;
-  padding: 12px;
+  padding: 12px 12px 36px;
   font-weight: 700;
   font-size: 15px;
   line-height: 1.2;
@@ -226,6 +236,18 @@ button { font: inherit; color: inherit; cursor: pointer; }
   background: rgba(0,0,0,.75);
   padding: 2px 6px;
   border-radius: 4px;
+}
+.type-tag {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .8px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: rgba(255,255,255,.9);
+  color: #0b0d12;
 }
 .card-title { font-weight: 600; font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .card-sub { color: var(--muted); font-size: 12px; margin-top: -4px; }
@@ -271,10 +293,13 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .m-tagline { color: var(--muted); font-style: italic; margin: 0 0 10px; }
 .m-meta { display: flex; flex-wrap: wrap; gap: 6px 14px; color: var(--muted); font-size: 14px; margin-bottom: 14px; }
 .m-meta .cert { border: 1px solid var(--muted); padding: 0 5px; border-radius: 3px; }
+.m-meta .kind { color: var(--text); font-weight: 600; }
 .m-meta .score { color: var(--accent-2); font-weight: 700; }
 .m-body .btns { margin: 16px 0 22px; }
 .m-overview { margin: 0; color: #d3d8e2; max-width: 70ch; }
 
+.tv-facts { list-style: none; padding: 0; margin: 16px 0 0; display: grid; gap: 4px; color: #d3d8e2; font-size: 14px; }
+.tv-facts b { color: var(--accent-2); }
 .watch { margin-top: 24px; padding-top: 18px; border-top: 1px solid #262c3b; }
 .watch h3 { margin: 0 0 12px; font-size: 17px; }
 .watch-group { margin-bottom: 12px; }

@@ -36,7 +36,7 @@ jobs:
         env:
           TMDB_READ_TOKEN: ${{ secrets.TMDB_READ_TOKEN }}
           TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
-          TMDB_REGION: ${{ vars.TMDB_REGION || 'US' }}
+          TMDB_REGIONS: ${{ vars.TMDB_REGIONS || 'US,GB,CA' }}
           TMDB_LANGUAGE: ${{ vars.TMDB_LANGUAGE || 'en-US' }}
         run: |
           if [ -z "$TMDB_READ_TOKEN" ] && [ -z "$TMDB_API_KEY" ]; then

@@ -1,0 +1,63 @@
+name: Movie platform — refresh releases & deploy
+
+on:
+  # Pull the latest releases from TMDB every 3 hours.
+  schedule:
+    - cron: '17 */3 * * *'
+  # Allow a manual refresh from the Actions tab.
+  workflow_dispatch:
+  # Redeploy when the site code changes.
+  push:
+    branches: [main]
+    paths:
+      - 'movie-platform/**'
+      - '.github/workflows/movie-platform.yml'
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: movie-platform-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Fetch latest releases from TMDB
+        env:
+          TMDB_READ_TOKEN: ${{ secrets.TMDB_READ_TOKEN }}
+          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
+          TMDB_REGION: ${{ vars.TMDB_REGION || 'US' }}
+          TMDB_LANGUAGE: ${{ vars.TMDB_LANGUAGE || 'en-US' }}
+        run: |
+          if [ -z "$TMDB_READ_TOKEN" ] && [ -z "$TMDB_API_KEY" ]; then
+            echo "::warning::No TMDB_READ_TOKEN / TMDB_API_KEY secret set — deploying sample data."
+          else
+            # If this fails the job stops and the previously deployed site stays live.
+            node movie-platform/scripts/fetch-movies.mjs
+          fi
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: movie-platform
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

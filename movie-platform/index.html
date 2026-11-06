@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ReelRadar — New Movies, Trailers & Where to Watch</title>
+  <meta name="description" content="Discover new movie releases, watch trailers and find where to stream them. Updated automatically." />
+  <meta name="theme-color" content="#0b0d12" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎬</text></svg>" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="topbar" id="topbar">
+    <a class="logo" href="#/">🎬 Reel<span>Radar</span></a>
+    <nav class="nav" aria-label="Main">
+      <a href="#/" data-view="home">Home</a>
+      <a href="#/new" data-view="new">New Releases</a>
+      <a href="#/upcoming" data-view="upcoming">Coming Soon</a>
+      <a href="#/mylist" data-view="mylist">My List</a>
+    </nav>
+    <div class="tools">
+      <select id="genre" aria-label="Filter by genre">
+        <option value="">All genres</option>
+      </select>
+      <input id="search" type="search" placeholder="Search movies…" autocomplete="off" aria-label="Search movies" />
+    </div>
+  </header>
+
+  <section id="hero" class="hero" hidden></section>
+
+  <div id="notice" class="notice" hidden></div>
+
+  <main id="content" class="content" aria-live="polite">
+    <div class="loading">Loading the latest releases…</div>
+  </main>
+
+  <footer class="footer">
+    <p>
+      <span id="updated" class="updated"></span>
+    </p>
+    <p class="attribution">
+      <img src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_short-8e7b30f73a4020692ccca9c88bafe5dcb6f8a62a4c6bc55cd9ba82bb2cd95f6c.svg" alt="TMDB" height="12" />
+      This product uses the TMDB API but is not endorsed or certified by TMDB.
+      Streaming availability data provided by JustWatch.
+    </p>
+  </footer>
+
+  <dialog id="modal" class="modal" aria-labelledby="modal-title">
+    <button class="modal-close" id="modal-close" aria-label="Close">✕</button>
+    <div id="modal-body"></div>
+  </dialog>
+
+  <div id="toast" class="toast" role="status" hidden></div>
+
+  <script src="js/app.js" defer></script>
+</body>
+</html>

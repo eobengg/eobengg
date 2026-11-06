@@ -1,0 +1,536 @@
+{
+ "generatedAt": "2026-11-06T21:23:17.077Z",
+ "source": "sample",
+ "region": "US",
+ "genres": {
+  "12": "Adventure",
+  "14": "Fantasy",
+  "16": "Animation",
+  "18": "Drama",
+  "27": "Horror",
+  "28": "Action",
+  "35": "Comedy",
+  "36": "History",
+  "37": "Western",
+  "53": "Thriller",
+  "80": "Crime",
+  "99": "Documentary",
+  "878": "Science Fiction",
+  "9648": "Mystery",
+  "10402": "Music",
+  "10749": "Romance",
+  "10751": "Family",
+  "10752": "War"
+ },
+ "sections": {
+  "trending": [
+   900001,
+   900002,
+   900003,
+   900004,
+   900005,
+   900006,
+   900007,
+   900008,
+   900014
+  ],
+  "now_playing": [
+   900008,
+   900003,
+   900001,
+   900005,
+   900002,
+   900004,
+   900006,
+   900007,
+   900014
+  ],
+  "upcoming": [
+   900009,
+   900010,
+   900011,
+   900012,
+   900013
+  ],
+  "popular": [
+   900001,
+   900002,
+   900003,
+   900004,
+   900005,
+   900006,
+   900007,
+   900008,
+   900009,
+   900010,
+   900011,
+   900012,
+   900013,
+   900014,
+   900015,
+   900016,
+   900017,
+   900018
+  ],
+  "top_rated": [
+   900016,
+   900004,
+   900017,
+   900002,
+   900014,
+   900018,
+   900001,
+   900007,
+   900006,
+   900003,
+   900015,
+   900005,
+   900008
+  ]
+ },
+ "movies": {
+  "900001": {
+   "id": 900001,
+   "title": "Signal Lost",
+   "tagline": "",
+   "overview": "A deep-space relay engineer hears a voice on a channel that has been silent for forty years.",
+   "poster": null,
+   "backdrop": null,
+   "release_date": "2026-11-02",
+   "certification": null,
+   "runtime": 118,
+   "vote_average": 7.6,
+   "vote_count": 1744,
+   "popularity": 100,
+   "genre_ids": [
+    878,
+    53
+   ],
+   "trailer": null,
+   "providers": null
+  },
+  "900002": {
+   "id": 900002,
+   "title": "The Last Orchard",
+   "tagline": "",
+   "overview": "Three siblings return to their late mother’s failing orchard and uncover the bargain she made to save it.",
+   "poster": null,
+   "backdrop": null,
+   "release_date": "2026-10-28",
+   "certification": null,
+   "runtime": 104,
+   "vote_average": 7.9,
+   "vote_count": 2055,
+   "popularity": 96,
+   "genre_ids": [
+    18
+   ],
+   "trailer": null,
+   "providers": null
+  },
+  "900003": {
+   "id": 900003,
+   "title": "Midnight Freight",
+   "tagline": "",
+   "overview": "A night-shift trucker is offered triple pay to haul a sealed container — no questions asked.",
+   "poster": null,
+   "backdrop": null,
+   "release_date": "2026-11-04",
+   "certification": null,
+   "runtime": 97,
+   "vote_average": 7.1,
+   "vote_count": 2366,
+   "popularity": 92,
+   "genre_ids": [
+    53,
+    80
+   ],
+   "trailer": null,
+   "providers": null
+  },
+  "900004": {
+   "id": 900004,
+   "title": "Paper Lanterns",
+   "tagline": "",
+   "overview": "An animated tale of a girl who folds paper animals that come alive during a city-wide blackout.",
+   "poster": null,
+   "backdrop": null,
+   "release_date": "2026-10-25",
+   "certification": null,
+   "runtime": 92,
+   "vote_average": 8.2,
+   "vote_count": 500,
+   "popularity": 88,
+   "genre_ids": [
+    16,
+    10751,
+    14
+   ],
+   "trailer": null,
+   "providers": null
+  },
+  "900005": {
+   "id": 900005,
+   "title": "Iron Tide",
+   "tagline": "",
+   "overview": "A coastal town’s salvage crew races a private army to recover a sunken prototype.",
+   "poster": null,
+   "backdrop": null,
+   "release_date": "2026-10-31",
+   "certification": null,
+   "runtime": 131,
+   "vote_average": 6.8,
+   "vote_count": 811,
+   "popularity": 84,
+   "genre_ids": [
+    28,
+    12
+   ],
+   "trailer": null,
+   "providers": null
+  },
+  "900006": {
+   "id": 900006,
+   "title": "Second Chorus",
+   "tagline": "",
+   "overview": "A washed-up wedding singer gets one last shot at the big stage — with her estranged daughter as bandmate.",
+   "poster": null,
+   "backdrop": null,
+   "release_date": "2026-10-20",
+   "certification": null,
+   "runtime": 109,
+   "vote_average": 7.3,
+   "vote_count": 1122,
+   "popularity": 80,
+   "genre_ids": [
+    35,
+    10402
+   ],
+   "trailer": null,
+   "providers": null
+  },
+  "900007": {
+   "id": 900007,
+   "title": "Cold Harbor Road",
+   "tagline": "",
+   "overview": "A rookie detective reopens a closed case after the main witness turns up alive.",
+   "poster": null,
+   "backdrop": null,
+   "release_date": "2026-10-10",
+   "certification": null,
+   "runtime": 122,
+   "vote_average": 7.4,
+   "vote_count": 1433,
+   "popularity": 76,
+   "genre_ids": [
+    80,
+    9648
+   ],
+   "trailer": null,
+   "providers": null
+  },
+  "900008": {
+   "id": 900008,
+   "title": "Hollow Pines",
+   "tagline": "",
+   "overview": "Campers discover that the forest rearranges itself every night.",
+   "poster": null,
+   "backdrop": null,
+   "release_date": "2026-11-05",
+   "certification": null,
+   "runtime": 94,
+   "vote_average": 6.5,
+   "vote_count": 1744,
+   "popularity": 72,
+   "genre_ids": [
+    27,
+    9648
+   ],
+   "trailer": null,
+   "providers": null
+  },
+  "900009": {
+   "id": 900009,
+   "title": "Starfall Academy",
+   "tagline": "",
+   "overview": "Teenage cadets at an orbital school must defend it when the adults vanish.",
+   "poster": null,
+   "backdrop": null,
+   "release_date": "2026-11-15",
+   "certification": null,
+   "runtime": 0,
+   "vote_average": 0,
+   "vote_count": 0,
+   "popularity": 68,
+   "genre_ids": [
+    878,
+    12,
+    10751
+   ],
+   "trailer": null,
+   "providers": null
+  },
+  "900010": {
+   "id": 900010,
+   "title": "The Cartographer",
+   "tagline": "",
+   "overview": "In 1820, a mapmaker charts a coastline that no other ship can find.",
+   "poster": null,
+   "backdrop": null,
+   "release_date": "2026-11-22",
+   "certification": null,
+   "runtime": 0,
+   "vote_average": 0,
+   "vote_count": 0,
+   "popularity": 64,
+   "genre_ids": [
+    36,
+    12,
+    18
+   ],
+   "trailer": null,
+   "providers": null
+  },
+  "900011": {
+   "id": 900011,
+   "title": "Laugh Track",
+   "tagline": "",
+   "overview": "A sitcom writer realises his audience laughter is coming from his own empty apartment.",
+   "poster": null,
+   "backdrop": null,
+   "release_date": "2026-11-29",
+   "certification": null,
+   "runtime": 0,
+   "vote_average": 0,
+   "vote_count": 0,
+   "popularity": 60,
+   "genre_ids": [
+    35,
+    27
+   ],
+   "trailer": null,
+   "providers": null
+  },
+  "900012": {
+   "id": 900012,
+   "title": "Velocity Zero",
+   "tagline": "",
+   "overview": "A street racer is recruited to test-drive a car that can bend time by a few seconds.",
+   "poster": null,
+   "backdrop": null,
+   "release_date": "2026-12-13",
+   "certification": null,
+   "runtime": 0,
+   "vote_average": 0,
+   "vote_count": 0,
+   "popularity": 56,
+   "genre_ids": [
+    28,
+    878
+   ],
+   "trailer": null,
+   "providers": null
+  },
+  "900013": {
+   "id": 900013,
+   "title": "Winter Letters",
+   "tagline": "",
+   "overview": "Pen pals separated by an ocean finally agree to meet — on the coldest night of the year.",
+   "poster": null,
+   "backdrop": null,
+   "release_date": "2026-12-27",
+   "certification": null,
+   "runtime": 0,
+   "vote_average": 0,
+   "vote_count": 0,
+   "popularity": 52,
+   "genre_ids": [
+    10749,
+    18
+   ],
+   "trailer": null,
+   "providers": null
+  },
+  "900014": {
+   "id": 900014,
+   "title": "Northern Lights Down",
+   "tagline": "",
+   "overview": "A documentary crew follows the scientists racing to understand a dimming aurora.",
+   "poster": null,
+   "backdrop": null,
+   "release_date": "2026-09-27",
+   "certification": null,
+   "runtime": 88,
+   "vote_average": 7.8,
+   "vote_count": 1433,
+   "popularity": 48,
+   "genre_ids": [
+    99
+   ],
+   "trailer": null,
+   "providers": {
+    "link": null,
+    "stream": [
+     {
+      "name": "Example Stream+",
+      "logo": null
+     }
+    ],
+    "free": [],
+    "rent": [
+     {
+      "name": "Example Rentals",
+      "logo": null
+     }
+    ],
+    "buy": []
+   }
+  },
+  "900015": {
+   "id": 900015,
+   "title": "Gold Dust Riders",
+   "tagline": "",
+   "overview": "An aging outlaw teams up with the sheriff who jailed him to stop a land grab.",
+   "poster": null,
+   "backdrop": null,
+   "release_date": "2026-08-03",
+   "certification": null,
+   "runtime": 115,
+   "vote_average": 7,
+   "vote_count": 1744,
+   "popularity": 44,
+   "genre_ids": [
+    37,
+    28
+   ],
+   "trailer": null,
+   "providers": {
+    "link": null,
+    "stream": [
+     {
+      "name": "Example Stream+",
+      "logo": null
+     }
+    ],
+    "free": [],
+    "rent": [
+     {
+      "name": "Example Rentals",
+      "logo": null
+     }
+    ],
+    "buy": []
+   }
+  },
+  "900016": {
+   "id": 900016,
+   "title": "The Glass Garden",
+   "tagline": "",
+   "overview": "A botanist grows a flower that records memories — and someone wants hers erased.",
+   "poster": null,
+   "backdrop": null,
+   "release_date": "2026-04-10",
+   "certification": null,
+   "runtime": 126,
+   "vote_average": 8.4,
+   "vote_count": 2055,
+   "popularity": 40,
+   "genre_ids": [
+    878,
+    18,
+    53
+   ],
+   "trailer": null,
+   "providers": {
+    "link": null,
+    "stream": [
+     {
+      "name": "Example Stream+",
+      "logo": null
+     }
+    ],
+    "free": [],
+    "rent": [
+     {
+      "name": "Example Rentals",
+      "logo": null
+     }
+    ],
+    "buy": []
+   }
+  },
+  "900017": {
+   "id": 900017,
+   "title": "Beneath the Static",
+   "tagline": "",
+   "overview": "A radio host takes a call from a listener who describes crimes before they happen.",
+   "poster": null,
+   "backdrop": null,
+   "release_date": "2025-12-11",
+   "certification": null,
+   "runtime": 112,
+   "vote_average": 8.1,
+   "vote_count": 2366,
+   "popularity": 36,
+   "genre_ids": [
+    53,
+    9648
+   ],
+   "trailer": null,
+   "providers": {
+    "link": null,
+    "stream": [
+     {
+      "name": "Example Stream+",
+      "logo": null
+     }
+    ],
+    "free": [],
+    "rent": [
+     {
+      "name": "Example Rentals",
+      "logo": null
+     }
+    ],
+    "buy": []
+   }
+  },
+  "900018": {
+   "id": 900018,
+   "title": "Kingdom of Small Things",
+   "tagline": "",
+   "overview": "An ant colony faces its greatest challenge when a garden is paved over.",
+   "poster": null,
+   "backdrop": null,
+   "release_date": "2025-10-02",
+   "certification": null,
+   "runtime": 89,
+   "vote_average": 7.7,
+   "vote_count": 500,
+   "popularity": 32,
+   "genre_ids": [
+    16,
+    10751,
+    35
+   ],
+   "trailer": null,
+   "providers": {
+    "link": null,
+    "stream": [
+     {
+      "name": "Example Stream+",
+      "logo": null
+     }
+    ],
+    "free": [],
+    "rent": [
+     {
+      "name": "Example Rentals",
+      "logo": null
+     }
+    ],
+    "buy": []
+   }
+  }
+ }
+}
